@@ -1,0 +1,16 @@
+@mixin color-red-deco {
+  color: white;
+  text-decoration: line-through;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    background: red;
+  }
+}

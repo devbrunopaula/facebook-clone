@@ -1,0 +1,219 @@
+// .navbar__container {
+//   // border: solid red;
+//   background: white;
+//   padding: 10px 10px;
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   @media (max-width: 1148px) {
+//     grid-template-columns: 1fr 2fr 1fr;
+//   }
+//   @media (max-width: 598px) {
+//     display: grid;
+//     grid-template-columns: 1fr 3fr;
+//   }
+// }
+
+// .navbar__left {
+//   // border: solid blue;
+//   display: flex;
+//   align-items: center;
+//   // @include for-phone-only;
+//   @media (max-width: 598px) {
+//     display: none;
+//   }
+// }
+
+// .navbar__search-box {
+//   background-color: $search-bg;
+//   display: flex;
+//   align-items: center;
+//   width: 240px;
+//   height: 40px;
+//   border-radius: 20px;
+//   color: #696b6f;
+//   font-size: 1.1rem;
+//   padding: 0 10px;
+//   @media (max-width: 1148px) {
+//     width: 40px;
+//   }
+// }
+
+// .navbar__search {
+//   background: none;
+//   border: none;
+//   padding-left: 10px;
+//   outline-style: none;
+//   width: 100%;
+// }
+
+// .navbar__center {
+//   //border: solid rgb(253, 93, 93);
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+
+// .navbar__right {
+//   border: solid rgba(18, 108, 182, 0.527);
+// }
+
+// .logo {
+//   height: 40px;
+//   padding-right: 10px;
+//   margin: 0;
+// }
+
+// .fa-home {
+//   color: red;
+//   font-size: 2rem;
+// }
+
+// .navbar__home {
+//   border: solid rebeccapurple;
+//   padding: 0 50px;
+// }
+
+// .navbar__icons {
+//   // border: solid rebeccapurple;
+//   width: 100px;
+//   text-align: center;
+// }
+// .navbar__icons.active {
+//   border-bottom: solid blue;
+//   // padding-bottom: 20px;
+// }
+
+.logo {
+  height: 40px;
+}
+.searchBox {
+  background: #f0f2f5;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 10px;
+  @media (max-width: 1448px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.searchBox .fa-search {
+  padding-left: 12px;
+  padding-right: 10px;
+  color: gray;
+}
+.searchBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.centerIcons .fas {
+  font-size: 1.5rem;
+  color: $icons-gray;
+  // margin: 0 40px;
+}
+
+.centerIcons {
+  // display: grid;
+  display: flex;
+  justify-content: space-evenly;
+  // grid-template-columns: repeat(5, 1fr);
+  // justify-content: space-evenly;
+
+  align-items: center;
+  height: 100%;
+  // border: solid red;
+}
+
+.center {
+  // border: solid rgb(132, 201, 6);
+  padding: 0 70px;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+.right {
+  // border: solid blue;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 400px) {
+    // border: solid rgb(218, 214, 31);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.avatar__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  // border: solid rgb(29, 83, 4);
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.avatar__wraper {
+  display: flex;
+  align-items: center;
+  //border: solid rgb(29, 83, 4);
+  // position: absolute;
+  // left: -0px;
+  // top: -5;
+
+  height: 100%;
+  // width: 150px;
+  padding: 4px 0 4px 5px;
+
+  @media (max-width: 1190px) {
+    display: none;
+  }
+  &:hover {
+    background: #f1f2f3;
+    border-radius: 30px;
+  }
+}
+.right_nav_icons {
+  // border: solid red;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  // padding: 0 px;
+}
+.nav_icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $icons-wrapper-bg;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  // border: solid rgb(7, 206, 146);
+  margin: 0 0.5rem;
+  color: $right-nav-icons;
+  position: relative;
+
+  .fa-sort-down {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 6px;
+  }
+  .alertCircle {
+    position: absolute;
+    background-color: #f02849;
+    height: 14px;
+    width: 14px;
+
+    top: 0;
+    right: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+}
