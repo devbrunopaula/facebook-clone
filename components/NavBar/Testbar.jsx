@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
-
+import Link from 'next/link'
 import {Grid, Box} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {shadows} from '@material-ui/system'
 import Size from '../../mediaSize'
+import Badge from '@material-ui/core/Badge'
 
 import Avatar from '@material-ui/core/Avatar'
 const useStyles = makeStyles((theme) => ({
@@ -55,14 +56,48 @@ function Testbar(props) {
         {/* <Hidden only={['xs', 'sm']}> */}
         <Grid item xs={6} className='center'>
           <div className='centerIcons'>
-            <i className='fas fa-home' />
-            <i className='fas fa-tv' />
-            <i className='fas fa-store' />
-            <i className='fas fa-users' />
+            <Link href='/'>
+              <div className='home-icon'>
+                <i className='fas fa-home' />
+              </div>
+            </Link>
+            <Link href='/test'>
+              <div className='nav-icon-hover'>
+                <Badge color='secondary' badgeContent={'9+'}>
+                  <i className='fas fa-tv' />
+                </Badge>
+              </div>
+            </Link>
+            <Link href='/test'>
+              <div className='nav-icon-hover'>
+                <Badge color='secondary' badgeContent={'1'}>
+                  <i className='fas fa-store' />
+                </Badge>
+              </div>
+            </Link>
+            <Link href='/test'>
+              <div className='nav-icon-hover'>
+                <Badge color='secondary' badgeContent={'9+'}>
+                  <i className='fas fa-users' />
+                </Badge>
+              </div>
+            </Link>
             {Size(1080) ? (
-              <i className='fas fa-gamepad' />
+              <Link href='/test'>
+                <div className='nav-icon-hover'>
+                  <Badge color='secondary' badgeContent={'1'}>
+                    <i className='fas fa-gamepad' />
+                  </Badge>
+                </div>
+              </Link>
             ) : (
-              <i className='fas fa-bars' />
+              <Link href='/test'>
+                <div className='nav-icon-hover'>
+                  <Badge color='secondary' badgeContent={'5'}>
+                    <i className='fas fa-bars' />
+                  </Badge>
+                </div>
+              </Link>
             )}
           </div>
         </Grid>
