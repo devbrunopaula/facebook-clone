@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import NavBar from '../components/NavBar/NavBar'
+import Test2 from '../components/NavBar/test2'
 import Testbar from '../components/NavBar/Testbar'
 
 export default function Home() {
@@ -11,7 +12,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       {/* <NavBar /> */}
-      <Testbar />
+      {/* <Testbar /> */}
+      <Test2 />
     </div>
   )
 }
