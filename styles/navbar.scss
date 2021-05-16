@@ -183,6 +183,163 @@
   padding: 1rem 2rem;
   // border: solid red;
 }
+
+// Test **************************//*****************
+
+.navbar {
+  background: white;
+  // border: solid #777777;
+  height: 60px;
+  display: flex;
+}
+
+.leftbox {
+  // border: solid #1005b3;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  @media (max-width: 700px) {
+    // width: 100px;
+    flex: 1;
+  }
+}
+.centerbox {
+  // border: solid #3eff03;
+  flex: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+.rightbox {
+  // border: solid #c76e07;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 700px) {
+    flex: 2;
+  }
+}
+
+.inner-left-Box {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  .logo-img {
+    height: 40px;
+    width: 40px;
+  }
+  .nav-searchBox {
+    background-color: $search-bg;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      color: $icons-gray;
+      width: 200px;
+      animation: ease-in-out;
+      @media (max-width: 1285px) {
+        display: none;
+        animation-delay: 1s;
+
+        animation: ease-in-out;
+      }
+    }
+    i {
+      color: $icons-gray;
+    }
+  }
+  .fa-search {
+    padding-right: 5px;
+  }
+}
+
+.nav-home-icon {
+  // border: solid red;
+  // width: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: 'center';
+  width: 13%;
+  padding: 15px 0;
+  position: relative;
+  &:hover {
+    // border-bottom: solid blue;
+    background: $search-bg;
+    border-radius: 10px;
+    width: 13%;
+  }
+}
+
+.centerbox .fas {
+  color: $icons-gray;
+  font-size: 1.3rem;
+}
+
+.ring {
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid $icons-gray;
+  padding: 0.8px;
+}
+
+.nav-home-icon > .fa-users {
+  &:hover {
+    background: red;
+  }
+}
+
+.ring .MuiBadge-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+}
+
+.avatarWrapper {
+  height: 45px;
+  // width: 130px;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  &:hover {
+    background-color: $search-bg;
+    border-radius: 25px 25px;
+    padding-left: 4px;
+  }
+  @media (max-width: 1260px) {
+    display: none;
+  }
+  p {
+    padding: 0 5px;
+
+    text-align: center;
+  }
+}
+
+.rightbox {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav-icons {
+  display: flex;
+  // background-color: red;
+  padding-right: 10px;
+}
+
 .right_nav_icons {
   // border: solid red;
   display: flex;
@@ -231,122 +388,4 @@
     border-radius: 10px;
     background: $search-bg;
   }
-}
-
-// Test **************************//*****************
-
-.navbar {
-  background: white;
-  // border: solid #777777;
-  height: 60px;
-  display: flex;
-}
-
-.leftbox {
-  // border: solid #1005b3;
-  height: 100%;
-  flex: 1;
-  display: flex;
-  @media (max-width: 700px) {
-    // width: 100px;
-    flex: 1;
-  }
-}
-.centerbox {
-  // border: solid #3eff03;
-  flex: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: 700px) {
-    display: none;
-  }
-  @media (max-width: 700px) {
-    display: none;
-  }
-}
-.rightbox {
-  flex: 1;
-  border: solid #c76e07;
-  height: 100%;
-
-  @media (max-width: 700px) {
-    flex: 2;
-  }
-}
-
-.inner-left-Box {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  .logo-img {
-    height: 40px;
-    width: 40px;
-  }
-  .nav-searchBox {
-    background-color: $search-bg;
-    margin-left: 10px;
-    border-radius: 20px;
-    padding: 10px;
-    input {
-      background: none;
-      border: none;
-      outline: none;
-      color: $icons-gray;
-      width: 200px;
-      animation: ease-in-out;
-      @media (max-width: 1285px) {
-        display: none;
-        animation-delay: 1s;
-
-        animation: ease-in-out;
-      }
-    }
-    i {
-      color: $icons-gray;
-    }
-  }
-  .fa-search {
-    padding-right: 5px;
-  }
-}
-.nav-home-icon {
-  // border: solid red;
-  // width: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: 'center';
-  width: 13%;
-  padding: 15px 0;
-  position: relative;
-  &:hover {
-    // border-bottom: solid blue;
-    background: $search-bg;
-    border-radius: 10px;
-    width: 13%;
-  }
-}
-
-.centerbox .fas {
-  color: $icons-gray;
-  font-size: 1.3rem;
-}
-.ring {
-  border-radius: 50%;
-  position: relative;
-  border: 2px solid $icons-gray;
-  padding: 0.8px;
-}
-.nav-home-icon > .fa-users {
-  &:hover {
-    background: red;
-  }
-}
-.ring .MuiBadge-badge {
-  position: absolute;
-  bottom: -5px;
-  right: -10px;
 }
