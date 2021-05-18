@@ -18,6 +18,14 @@ const ActiveLink = ({
     router.asPath === href ? setActive('selected') : setActive('')
   }
 
+  const styles = {
+    button: {
+      background: router.asPath === href ? 'none' : '',
+      borderRadius: router.asPath === href ? '0' : '10px',
+      margin: '0 10px',
+    },
+  }
+
   useEffect(() => {
     activeStatus()
     return () => {
@@ -31,6 +39,7 @@ const ActiveLink = ({
         aria-label={toolTipTitle}
       >
         <div
+          style={styles.button}
           className={`nav-home-icon ${
             router.asPath === href ? 'selected' : ''
           }`}
