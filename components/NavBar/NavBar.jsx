@@ -50,7 +50,7 @@ function NavBar() {
           iconName='fa-tv'
         ></ActiveLink>
         <ActiveLink
-          href='/test'
+          href='/marketplace'
           toolTipTitle='Marketplace'
           ToolTipSize='12px'
           badgeContent='9+'
