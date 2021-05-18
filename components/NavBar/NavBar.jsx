@@ -42,9 +42,15 @@ function NavBar() {
           badgeContent={0}
           iconName='fa-home'
         ></ActiveLink>
-
         <ActiveLink
           href='/test'
+          toolTipTitle='Watching'
+          ToolTipSize='12px'
+          badgeContent='9+'
+          iconName='fa-tv'
+        ></ActiveLink>
+        <ActiveLink
+          href='/marketplace'
           toolTipTitle='Marketplace'
           ToolTipSize='12px'
           badgeContent='9+'

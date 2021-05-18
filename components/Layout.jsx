@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     margin: 20,
-    border: 'solid red',
+    // border: 'solid red',
   },
   paper: {
     height: 140,
