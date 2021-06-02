@@ -1,10 +1,14 @@
 import '../styles/main.scss'
 import Layout from '../components/Layout'
+import {ThemeProvider} from '@material-ui/styles'
+import theme from '../components/ui/theme'
 function MyApp({Component, pageProps}) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider theme={theme}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   )
 }
 
