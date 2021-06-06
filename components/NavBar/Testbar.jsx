@@ -5,133 +5,70 @@ import {makeStyles} from '@material-ui/core/styles'
 import {shadows} from '@material-ui/system'
 import Size from '../../mediaSize'
 import Badge from '@material-ui/core/Badge'
-
+import AppBar from '@material-ui/core/AppBar'
 import Avatar from '@material-ui/core/Avatar'
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: 10,
-    flexGrow: 1,
-    width: '100%',
-    boxShadow: '0 0 8px .5px #dadada',
-    background: 'white',
-    '@media (max-width: 780px)': {
-      //   background: 'red',
-    },
-  },
-  left: {
-    // border: 'solid red',
-    display: 'flex',
-  },
-  center: {
-    border: 'solid blue',
-  },
-  right: {
-    border: 'solid purple',
-  },
-  small: {
-    width: theme.spacing(4),
-    height: theme.spacing(4),
-  },
-}))
+import Toolbar from '@material-ui/core/Toolbar'
+import useScrollTrigger from '@material-ui/core/useScrollTrigger'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import HomeIcon from '@material-ui/icons/Home'
+import Icon from '@material-ui/core/Icon'
+const useStyles = makeStyles(
+  (theme) => (
+    console.log(theme),
+    {
+      root: {
+        flexGrow: 1,
+        // maxWidth: ,
+      },
+      left: {
+        // border: 'solid red',
+      },
+      center: {
+        // border: 'solid #003cff',
+      },
+      right: {
+        // border: 'solid #235005',
+      },
+    }
+  )
+)
 
 function Testbar(props) {
-  const [mediaSize, setMediaSize] = useState('')
-  const style = useStyles()
-  const {width} = props
+  const {children, value, index, ...other} = props
+  const classes = useStyles()
   return (
-    <Box className={style.root}>
-      <Grid container>
-        <Grid className={style.left} item xs={3}>
-          <img className='logo' src='/images/logo.png' alt='logo' />
-          <div className='searchBox'>
-            <i className='fas fa-search'></i>
-            <input
-              type='search'
-              name='search'
-              id=''
-              placeholder='Search Facebook'
-            />
-          </div>
-        </Grid>
-        {/* <Hidden only={['xs', 'sm']}> */}
-        <Grid item xs={6} className='center'>
-          <div className='centerIcons'>
-            <Link href='/'>
-              <div className='home-icon'>
-                <i className='fas fa-home' />
-              </div>
-            </Link>
-            <Link href='/test'>
-              <div className='nav-icon-hover'>
-                <Badge color='secondary' badgeContent={'9+'}>
-                  <i className='fas fa-tv' />
-                </Badge>
-              </div>
-            </Link>
-            <Link href='/test'>
-              <div className='nav-icon-hover'>
-                <Badge color='secondary' badgeContent={'1'}>
-                  <i className='fas fa-store' />
-                </Badge>
-              </div>
-            </Link>
-            <Link href='/test'>
-              <div className='nav-icon-hover'>
-                <Badge color='secondary' badgeContent={'9+'}>
-                  <i className='fas fa-users' />
-                </Badge>
-              </div>
-            </Link>
-            {Size(1080) ? (
-              <Link href='/test'>
-                <div className='nav-icon-hover'>
-                  <Badge color='secondary' badgeContent={'1'}>
-                    <i className='fas fa-gamepad' />
-                  </Badge>
-                </div>
-              </Link>
-            ) : (
-              <Link href='/test'>
-                <div className='nav-icon-hover'>
-                  <Badge color='secondary' badgeContent={'5'}>
-                    <i className='fas fa-bars' />
-                  </Badge>
-                </div>
-              </Link>
-            )}
-          </div>
-        </Grid>
-        {/* </Hidden> */}
-        <Grid item xs={Size(700) ? 3 : 9} className='right'>
-          <div className='avatar__container'>
-            <div className='avatar__wraper'>
-              <Avatar
-                className={style.small}
-                alt='Bruno Paula'
-                src='https://brunopaula.com/images/brunopaula.jpg'
+    <>
+      <AppBar color='white' position='static' className={classes.root}>
+        <Toolbar>
+          <Box className={classes.left} width='28%'>
+            1
+          </Box>
+          <Box className={classes.center} width='56%'>
+            <Tabs
+              value={0}
+              onChange={() => {}}
+              variant='fullWidth'
+              indicatorColor='primary'
+              aria-label='example'
+              centered
+            >
+              <Tab
+                icon={<HomeIcon style={{fontSize: '1rem'}} />}
+                aria-label='home'
               />
-              <p>Bruno</p>
-            </div>
 
-            <div className='right_nav_icons'>
-              <div className='nav_icons-wrapper'>
-                <i class='fas fa-plus'></i>
-              </div>
-              <div className='nav_icons-wrapper'>
-                <i class='fab fa-facebook-messenger'></i>
-              </div>
-              <div className='nav_icons-wrapper'>
-                <i class='fas fa-bell'></i>
-              </div>
-              <div className='nav_icons-wrapper'>
-                <span className='alertCircle'></span>
-                <i class='fas fa-sort-down'></i>
-              </div>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
-    </Box>
+              <Tab icon={<HomeIcon />} aria-label='home' />
+              <Tab icon={<HomeIcon />} aria-label='home' />
+              <Tab icon={<HomeIcon />} aria-label='home' />
+            </Tabs>
+          </Box>
+          <Box className={classes.right} width='28%'>
+            3
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </>
   )
 }
 

@@ -1,7 +1,8 @@
 import NavBar from './NavBar/NavBar'
 import {makeStyles} from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import Testbar from './NavBar/Testbar'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,7 +24,8 @@ const Layout = ({children}) => {
   const classes = useStyles()
   return (
     <Grid className={classes.root}>
-      <NavBar />
+      {/* <NavBar /> */}
+      <Testbar />
       <Grid item className={classes.main}>
         {children}
       </Grid>
